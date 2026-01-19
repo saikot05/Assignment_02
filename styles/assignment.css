@@ -52,22 +52,105 @@
             
             .btn {
                 display: flex;
-                font-size: 16px;
+                font-size: 1rem;
                 font-weight: 600;
                 gap: 0.5rem;
                 color: #FFFFFF;
                 padding: 0.8rem 1rem;
                 border: none;
+                border-radius: 1000px;
                 cursor: pointer;
                 background: linear-gradient(to left, #9100F8, #FB09B4, #F7E93F);
+                transition: all 0.3s ease;
+            }
+            
+            .btn:hover {
+                transform: scale(1.05);
             }
             
             .hamburger {
                 display: none;
             }
+            /* Banner section */
+            
+            .banner-container {
+                width: 100%;
+                background: url(../assets/hero-bg.png) center/cover no-repeat;
+                margin-top: 0;
+                background-position: center;
+                padding: 6rem 1rem;
+            }
+            
+            .banner {
+                max-width: 100%;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+            }
+            
+            .microphone {
+                width: 22rem;
+                height: 22rem;
+                background: url(../assets/hero-circle.png) no-repeat center/contain;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 2.5rem;
+                position: relative;
+            }
+            
+            .badge {
+                background-color: #00FF88;
+                border-radius: 1000px;
+                width: 3rem;
+                font-size: small;
+                position: absolute;
+                right: 40px;
+                top: 30px;
+            }
+            
+            .microphone img {
+                width: 9rem;
+                height: auto;
+            }
+            
+            .micro-content h2 {
+                font-size: 3.5rem;
+                font-weight: 800;
+                color: #FFFFFF;
+                margin-bottom: 1.5rem;
+            }
+            
+            .micro-content p {
+                font-size: 1rem;
+                font-weight: 400;
+                color: #FFFFFF;
+                margin-bottom: 1.5rem;
+            }
+            
+            .btn-group {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+            }
+            
+            .btn2 {
+                border: 1px solid #00FF88;
+                background: transparent;
+                color: #00FF88;
+            }
             /* responsive section */
             
             @media screen and (max-width:576px) {
+                nav {
+                    justify-content: space-between;
+                }
+                nav h3 {
+                    font-size: 1rem;
+                }
                 .menu-container {
                     display: none;
                 }
@@ -77,7 +160,30 @@
                 .hamburger {
                     display: block;
                 }
-                nav {
-                    justify-content: space-between;
+                .microphone {
+                    width: 16rem;
+                    height: 16rem;
+                    margin-bottom: 1.5rem;
+                }
+                .microphone img {
+                    width: 5rem;
+                }
+                .micro-content h2 {
+                    font-size: 2.5rem;
+                }
+                .micro-content p {
+                    font-size: 0.8rem;
+                    margin-bottom: 1.2rem;
+                }
+                .btn-group {
+                    display: flex;
+                    justify-content: center;
+                    gap: 0.5rem;
+                }
+                btn,
+                btn2 {
+                    width: 50%;
+                    font-size: 0.7rem;
+                    padding: 0.6rem 0.7rem;
                 }
             }
