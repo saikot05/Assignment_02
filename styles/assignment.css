@@ -63,11 +63,13 @@
                         border-radius: 1000px;
                         cursor: pointer;
                         background: linear-gradient(to left, #9100F8, #FB09B4, #F7E93F);
-                        transition: all 0.3s ease;
+                        transition: all 0.4s ease-in-out;
+                        background-size: 200% 200%;
                     }
                     
                     .btn:hover {
                         transform: scale(1.05);
+                        background-position: right center;
                     }
                     
                     .hamburger {
@@ -97,12 +99,16 @@
                         width: 22rem;
                         height: 22rem;
                         background: url(../assets/hero-circle.png) no-repeat center/contain;
-                        margin: 0 auto;
+                        margin: 0 auto 2.5rem auto;
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        margin-bottom: 2.5rem;
                         position: relative;
+                    }
+                    
+                    .microphone img {
+                        width: 9rem;
+                        height: auto;
                     }
                     
                     .badge {
@@ -113,11 +119,6 @@
                         position: absolute;
                         right: 40px;
                         top: 30px;
-                    }
-                    
-                    .microphone img {
-                        width: 9rem;
-                        height: auto;
                     }
                     
                     .micro-content h2 {
@@ -132,6 +133,7 @@
                         font-weight: 400;
                         color: #FFFFFF;
                         margin-bottom: 1.5rem;
+                        opacity: 0.7;
                     }
                     
                     .btn-group {
@@ -150,7 +152,7 @@
                     .about {
                         background-color: #1A0B2E;
                         margin: 0 auto;
-                        padding: 50px 200px;
+                        padding: 3rem 12.5rem;
                     }
                     
                     .about-content {
@@ -417,9 +419,7 @@
                         .card h4 {
                             font-size: 1rem;
                         }
-                        .menu-container {
-                            display: none;
-                        }
+                        .menu-container,
                         .primary-btn {
                             display: none;
                         }
@@ -466,11 +466,6 @@
                         .choose {
                             padding: 3rem 1rem;
                         }
-                        .choose-container {
-                            display: grid;
-                            grid-template-columns: repeat(1, 1fr);
-                            gap: 1rem;
-                        }
                         .audio,
                         .device,
                         .location,
@@ -482,7 +477,8 @@
                         .feature {
                             padding: 3rem 1rem;
                         }
-                        .feature-card {
+                        .feature-card,
+                        .choose-container {
                             grid-template-columns: 1fr;
                         }
                         .host-card {
@@ -503,5 +499,28 @@
                             margin-top: 2rem;
                             gap: 2rem;
                             flex-wrap: wrap;
+                        }
+                    }
+                    
+                    @media screen and (min-width: 577px) and (max-width: 991px) {
+                        .feature-card {
+                            grid-template-columns: repeat(1, 1fr);
+                        }
+                        .choose {
+                            padding: 3rem 1rem;
+                        }
+                        .audio,
+                        .device,
+                        .location,
+                        .exclusive,
+                        .resource {
+                            grid-column: span 1;
+                            grid-row: span 1;
+                        }
+                        .choose-container {
+                            grid-template-columns: repeat(1, 1fr);
+                        }
+                        .host-card {
+                            flex-direction: row;
                         }
                     }
