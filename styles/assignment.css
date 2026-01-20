@@ -20,14 +20,16 @@
                         justify-content: space-around;
                     }
                     
-                    nav span {
+                    nav span,
+                    .footer-logo span {
                         display: inline-block;
                         background: linear-gradient(to right, #F7E93F, #FB09B4, #9100F8);
                         background-clip: text;
                         color: transparent;
                     }
                     
-                    nav h3 {
+                    nav h3,
+                    .footer-logo {
                         font-size: 2rem;
                         font-weight: 700;
                         color: #FFFFFF;
@@ -81,7 +83,8 @@
                         padding: 6rem 1rem;
                     }
                     
-                    .banner {
+                    .banner,
+                    .footer-container {
                         max-width: 100%;
                         margin: 0 auto;
                         display: flex;
@@ -370,6 +373,40 @@
                         align-items: center;
                         gap: 0.8rem;
                     }
+                    /* footer section */
+                    
+                    .footer {
+                        background: url(../assets/footer-bg.png);
+                        max-width: 100%;
+                        margin: 0 auto;
+                        padding: 7.5rem;
+                        background-position: center;
+                    }
+                    
+                    .footer-icons {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-top: 2rem;
+                        gap: 2rem;
+                    }
+                    
+                    .footer-icons p {
+                        display: flex;
+                        color: #FFFFFF;
+                        gap: 0.8rem;
+                        font-size: 1rem;
+                        font-weight: 400;
+                        opacity: 0.7;
+                    }
+                    
+                    .footer-credit {
+                        font-size: 1rem;
+                        font-weight: 400;
+                        margin-top: 2rem;
+                        color: #FFFFFF;
+                        opacity: 0.7;
+                    }
                     /* responsive section */
                     
                     @media screen and (max-width: 576px) {
@@ -455,5 +492,16 @@
                         }
                         .host-icon {
                             justify-content: center;
+                        }
+                        .footer {
+                            margin: 0 auto;
+                        }
+                        .footer-icons {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-top: 2rem;
+                            gap: 2rem;
+                            flex-wrap: wrap;
                         }
                     }
