@@ -142,6 +142,69 @@
                 background: transparent;
                 color: #00FF88;
             }
+            /* About section */
+            
+            .about {
+                background-color: #1A0B2E;
+                margin: 0 auto;
+                padding: 50px 200px;
+            }
+            
+            .about-content {
+                text-align: center;
+                color: #FFFFFF;
+            }
+            
+            .about-content h2 {
+                font-size: 3rem;
+                font-weight: 700;
+                margin-bottom: 1rem;
+                text-align: center;
+                text-transform: capitalize;
+            }
+            
+            .about-content p {
+                font-size: 1rem;
+                font-weight: 400;
+                text-align: center;
+                opacity: 0.7;
+                margin-bottom: 80px;
+            }
+            
+            .about-content hr {
+                border: 1px solid #FFFFFF;
+                opacity: 0.7;
+                margin-bottom: 80px;
+            }
+            
+            .about-review {
+                max-width: 80%;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 1.5rem;
+                align-items: center;
+                margin: 0 auto;
+                justify-content: center;
+                margin-bottom: 7.5rem;
+            }
+            
+            .status {
+                text-align: center;
+            }
+            
+            .status h2 {
+                font-size: 3rem;
+                font-weight: 900;
+                color: #00FF88;
+            }
+            
+            .status p {
+                font-size: 1rem;
+                font-weight: 400;
+                color: #FFFFFF;
+                opacity: 0.7;
+                text-transform: uppercase;
+            }
             /* responsive section */
             
             @media screen and (max-width:576px) {
@@ -160,6 +223,9 @@
                 .hamburger {
                     display: block;
                 }
+                .banner {
+                    justify-content: center;
+                }
                 .microphone {
                     width: 16rem;
                     height: 16rem;
@@ -176,14 +242,19 @@
                     margin-bottom: 1.2rem;
                 }
                 .btn-group {
-                    display: flex;
                     justify-content: center;
-                    gap: 0.5rem;
                 }
                 btn,
                 btn2 {
-                    width: 50%;
                     font-size: 0.7rem;
-                    padding: 0.6rem 0.7rem;
+                }
+                .about-content {
+                    padding: 0;
+                    text-align: center;
+                }
+                .about-review {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    text-align: center;
                 }
             }
